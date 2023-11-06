@@ -12,3 +12,17 @@ C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\Calculator\Calculator\obj\Debu
 C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\Calculator\Calculator\obj\Debug\net6.0\Calculator.pdb
 C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\Calculator\Calculator\obj\Debug\net6.0\Calculator.genruntimeconfig.cache
 C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\Calculator\Calculator\obj\Debug\net6.0\ref\Calculator.dll
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\bin\Debug\net6.0\Calculator.exe
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\bin\Debug\net6.0\Calculator.deps.json
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\bin\Debug\net6.0\Calculator.runtimeconfig.json
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\bin\Debug\net6.0\Calculator.dll
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\bin\Debug\net6.0\Calculator.pdb
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\obj\Debug\net6.0\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\obj\Debug\net6.0\Calculator.AssemblyInfoInputs.cache
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\obj\Debug\net6.0\Calculator.AssemblyInfo.cs
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\obj\Debug\net6.0\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\obj\Debug\net6.0\Calculator.dll
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\obj\Debug\net6.0\refint\Calculator.dll
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\obj\Debug\net6.0\Calculator.pdb
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\obj\Debug\net6.0\Calculator.genruntimeconfig.cache
+C:\Users\teelman\Desktop\Opdrachten\C#\Calculator\CSharp-Calculator-Opdracht\Calculator\obj\Debug\net6.0\ref\Calculator.dll
