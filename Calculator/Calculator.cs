@@ -16,7 +16,7 @@
                     result = num1 - num2;
                     break;
                 case '/':
-                    if (num2 == 0)
+                    if (num1 < 1 || num2 < 1)
                     {
                         valid = false;
                     }
