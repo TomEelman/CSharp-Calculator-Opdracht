@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Calculator.Core;
 
 namespace CalculatorProgram
 {
@@ -7,75 +7,26 @@ namespace CalculatorProgram
         static void Main(string[] args)
         {
             bool proceed = true;
-            decimal num1;
-            decimal num2;
-
+            decimal number1;
+            decimal number2;
+            char operatorParam;
             while (proceed)
             {
-                do
-                {
-                    Console.WriteLine("Enter first number");
-                    string inputUser1 = Console.ReadLine();
-
-                    if (string.IsNullOrEmpty(inputUser1))
-                    {
-                        Console.WriteLine("You need to fill in the first number!!");
-                        Console.WriteLine("");
-                    }
-                    else
-                    {
-                        if (decimal.TryParse(inputUser1, out num1))
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            Console.WriteLine("");
-                            Console.WriteLine("This input needs to be a valid number!!");
-                            Console.WriteLine("");
-                        }
-                    }
-                } while (true);
-
-                do
-                {
-                    Console.WriteLine("Enter second number");
-                    string inputUser2 = Console.ReadLine();
-
-                    if (string.IsNullOrEmpty(inputUser2))
-                    {
-                        Console.WriteLine("You need to fill in the second number!!");
-                        Console.WriteLine("");
-                    }
-                    else
-                    {
-                        if (decimal.TryParse(inputUser2, out num2))
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            Console.WriteLine("");
-                            Console.WriteLine("This input needs to be a valid number!!");
-                            Console.WriteLine("");
-                        }
-                    }
-                } while (true);
+                number1 = handleInput("Enter first number");
+                number2 = handleInput("Enter second number");
 
                 Console.WriteLine("Choose operator: +, -, /, *");
-                char oper = Convert.ToChar(Console.ReadLine());
+                operatorParam = Convert.ToChar(Console.ReadLine());
 
-                Calculate calculator = new Calculate();
-                decimal result = calculator.PerformCalculation(num1, num2, oper);
-                decimal result_rounded = Math.Round(result, 2);
-
-                if (result == -469864871481296421)
+                CalculateService calculator = new CalculateService();
+                var calculatedResult = calculator.PerformCalculation(number1, number2, operatorParam);
+                if (!calculatedResult.IsSucces)
                 {
-                    Console.WriteLine("Cannot divide by 0 !!");
+                    Console.WriteLine(calculatedResult.ErrorMessage);
                 }
                 else
                 {
-                    Console.WriteLine("Result: " + result_rounded);
+                    Console.WriteLine("Result: " + calculatedResult.Result);
                 }
 
                 Console.WriteLine("To proceed, type 'y' or 'yes', or 'n' or 'no' to stop:");
@@ -89,15 +40,55 @@ namespace CalculatorProgram
                 {
                     proceed = false;
                     Console.WriteLine("Calculator stopped.");
-                    System.Threading.Thread.Sleep(2000);
+                    Thread.Sleep(2000);
                 }
                 else
                 {
                     Console.WriteLine("Invalid confirmation, Stopping calculator.");
-                    System.Threading.Thread.Sleep(2000);
+                    Thread.Sleep(2000);
                     Environment.Exit(0);
                 }
             }
         }
+
+        private static decimal handleInput(string questionText)
+        {
+            do
+            {
+                decimal inputValue;
+
+                Console.WriteLine(questionText);
+                string inputUser = Console.ReadLine();
+                int decimalLength = inputUser.IndexOfAny(new char[] { '.', ',' });
+
+                if (string.IsNullOrEmpty(inputUser))
+                {
+                    Console.WriteLine("You need to fill in this number!!");
+                    Console.WriteLine("");
+                }
+                else
+                {
+                    if (decimal.TryParse(inputUser, out inputValue))
+                    {
+                        if (decimalLength != -1 && inputUser.Substring(decimalLength + 1).Length > 2)
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("Can only have 2 decimals behind the '.' or ','");
+                            Console.WriteLine("");
+                        }
+
+                        return inputValue;
+                    }
+                    else
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("This input needs to be a valid number!!");
+                        Console.WriteLine("");
+                    }
+
+                }
+            } while (true);
+        }
+
     }
 }
