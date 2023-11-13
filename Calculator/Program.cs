@@ -75,6 +75,7 @@ namespace CalculatorProgram
                             Console.WriteLine("");
                             Console.WriteLine("Can only have 2 decimals behind the '.' or ','");
                             Console.WriteLine("");
+                            continue;
                         }
 
                         return inputValue;
